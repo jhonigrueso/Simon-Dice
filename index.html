@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Simon Dice</title>
+    <script src="js/d3.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .boton {
+            cursor: pointer;
+        }
+
+        body {
+            padding-bottom: 70px;
+            padding-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-success fixed-top">
+    <a class="navbar-brand" target="_blank" href="#">Simon Dice</a>
+    <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ml-auto">
+        </ul>
+    </div>
+</nav>
+<main class="container-fluid">
+    <div class="row text-center">
+        <div class="col-12">
+            <h1>Simon Dice</h1>
+        </div>
+        <div class="col-12 table-responsive">
+            <button id="comenzar" class="mb-2 btn btn-success">Comenzar juego</button>
+            <div id="contenedorJuego"></div>
+        </div>
+    </div>
+</main>
+<script src="js/game.js"></script>
+</body>
+</html>
