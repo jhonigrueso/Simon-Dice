@@ -19,10 +19,10 @@ const juego = () => {
     const gamma = 2;
     const milisegundosCpu = 200,
         milisegundosUsuario = 150;
-    const sonidoSuperiorIzquierda = cargarSonido("1.mp3"),
-        sonidoSuperiorDerecha = cargarSonido("2.mp3"),
-        sonidoInferiorIzquierda = cargarSonido("3.mp3"),
-        sonidoInferiorDerecha = cargarSonido("4.mp3");
+    const sonidoSuperiorIzquierda = cargarSonido("audios/1.mp3"),
+      sonidoSuperiorDerecha = cargarSonido("audios/2.mp3"),
+      sonidoInferiorIzquierda = cargarSonido("audios/3.mp3"),
+      sonidoInferiorDerecha = cargarSonido("audios/4.mp3");
 
     let puedeJugar = false;
     let contador = 0;

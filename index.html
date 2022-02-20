@@ -11,22 +11,21 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         .boton {
-            cursor: pointer;
+            cursor: url("img/cursor-pointer.png"), pointer !important;
         }
 
         body {
             padding-bottom: 70px;
             padding-top: 70px;
+            cursor: url("img/cursor.png"),auto !important;
         }
     </style>
 </head>
 
 <body  style="background: #ccc;">
 <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
-    <a class="navbar-brand" target="_blank" href="#">Simon Dice</a>
-    <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ml-auto">
-        </ul>
+    <div class="container-fluid">
+        <a class="navbar-brand"  href="#">Simon Dice</a>
     </div>
 </nav>
 <main class="container-fluid">
@@ -35,7 +34,7 @@
             <h1>BIENVENIDO SIMON DICE</h1>
         </div>
         <div class="col-12 table-responsive">
-            <button id="comenzar" class="mb-2 mt-5 btn btn-primary">Comienzar Partida</button>
+            <button id="comenzar" class="mb-2 mt-5 btn btn-primary boton">Comienzar Partida</button>
             <div id="contenedorJuego"></div>
         </div>
     </div>
