@@ -18,7 +18,7 @@ const juego = () => {
     const distancia = 10;
     const gamma = 2;
     const milisegundosCpu = 200,
-        milisegundosUsuario = 100;
+        milisegundosUsuario = 150;
     const sonidoSuperiorIzquierda = cargarSonido("1.mp3"),
         sonidoSuperiorDerecha = cargarSonido("2.mp3"),
         sonidoInferiorIzquierda = cargarSonido("3.mp3"),
@@ -30,10 +30,10 @@ const juego = () => {
     let secuencia = [];
 
     const verde = d3.color("#1B5E20"),
-        rojo = d3.color("#B71C1C"),
-        amarillo = d3.color("#F9A825"),
-        azul = d3.color("#0D47A1"),
-        negro = d3.color("#212121");
+      rojo = d3.color("#AE1B1B"),
+      amarillo = d3.color("#F9A825"),
+      azul = d3.color("#0D47A1"),
+      negro = d3.color("#252424");
 
 
     const circuloFondo = d3.arc()
@@ -51,7 +51,10 @@ const juego = () => {
     const $svg = d3.select("#contenedorJuego")
         .append("svg")
         .attr('width', 400)
-        .attr('height', 400);
+        .attr('height', 400)
+        .style('margin-top', '100px')
+        .style('justify-content', 'center')
+        .style('align-items', 'center');
 
     $svg.append("g")
         .attr("transform", `translate(${centroX},${centroY})`)
@@ -194,7 +197,10 @@ const juego = () => {
             } else {
 
                 $btnComenzar.disabled = false;
-                Swal.fire("Perdiste", `Has perdido. Tu puntuación fue de ${puntaje}. Puedes jugar de nuevo cuando quieras`);
+                Swal.fire(
+                  "😞<br>Perdiste",
+                  `Has perdido. Tu puntuación fue de ${puntaje}. Puedes intentarlo nuevos cuando desees.`
+                );
             }
         });
     });
@@ -214,11 +220,14 @@ const juego = () => {
         turnoDelCpu();
     });
 }
-Swal.fire("Bienvenido", `Comienza a jugar, mira la secuencia e imítala (cuando hagas clic, espera a que el botón se apague para hacer el siguiente clic).
+Swal.fire(
+  "Bienvenido A Simon Dice",
+  `Comienza a jugar, mirado la secuencia e imítala (cuando hagas clic, espera a que el botón se apague para hacer el siguiente clic y seguir la secuencia que se te presento).
 <br>
 <br>
-    Ganas cuando se desborde la memoria del programa u ocurra un fallo, aunque probablemente pierdas antes de que eso ocurra.
+    Ganas cuando se desborde la memoria del programa o ocurra un fallo, aunque probablemente pierdas antes de que eso pueda suceder.😃
     <br>
     <br>
-   `)
-    .then(juego)
+    Da todo lo mejor de tí
+   `
+).then(juego);
